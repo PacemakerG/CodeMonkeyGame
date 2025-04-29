@@ -79,25 +79,37 @@ public class Player : MonoBehaviour, IKitchenItemHolder, IKitchenItemReceiver
     IKitchenItemProcessor processor = otherItemHolder as IKitchenItemProcessor;
     if (processor != null)
     {
-        // 是加工器，根据情况处理
+        // 玩家有物品，加工器没物品 - 可以放置
         if (HasItem() && !processor.HasItem())
         {
-            // 玩家有物品，加工器没物品 - 可以放置
             Debug.Log($"与加工器交互: {processor.GetType().Name}");
             GiveItemTo(processor);
-            GetCuttingprocess?.Invoke();
             return;
         }
+        // 玩家有物品，加工器有物品 - 无法放置
         else if (HasItem() && processor.HasItem()) 
-        {
-            // 玩家有物品，加工器有物品 - 无法放置
+        {   
             Debug.Log("加工器上已有物体，无法放置新物品");
             return;
         }
+        // 玩家没物品，加工器有物品 - 触发切割事件
         else if (!HasItem() && processor.HasItem())
         {
-            // 玩家没物品，加工器有物品 - 可以拿走
-            TakeItemFrom(processor);
+            // 检查物品是否已经被加工
+            Recipe matchingRecipe = processor.GetMatchingRecipe_inputItem(); 
+            // 如果没有匹配的配方，说明物品已被加工或无法加工
+            if (matchingRecipe == null)
+            {
+                // 物品已加工过或无法加工，直接取走物品
+                Debug.Log("物品已加工完成或无法加工，直接拿取");
+                TakeItemFrom(processor);
+            }
+            else
+            {
+                // 物品未加工，触发加工事件
+                Debug.Log("物品可加工，触发加工事件");
+                GetCuttingprocess?.Invoke();
+            }
             return;
         }
         else

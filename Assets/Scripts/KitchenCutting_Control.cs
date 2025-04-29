@@ -8,20 +8,24 @@ public class KitchenCutting_Control : MonoBehaviour, IKitchenItemProcessor
     [SerializeField] private Recipe[] recipes;
     [SerializeField] private Player player;
 
-    void start()
+    void Start()
     {
         player.GetCuttingprocess += Cutting;
     }
+    void OnDisable()
+    {
+         player.GetCuttingprocess -= Cutting;
+    }
     private void Cutting()
     {
-        Recipe cuttingresult =  GetMatchingRecipe();
+        Recipe cuttingresult =  GetMatchingRecipe_inputItem();
         KitchenStuffSO cuttingItem = cuttingresult.output;
         kitchenStuffControl.SpawnKitchenItem(cuttingItem);
     }
 
     #region IKitchenItemProcessor 接口实现
     // 当前接口中唯一定义的方法
-    public Recipe GetMatchingRecipe()
+    public Recipe GetMatchingRecipe_inputItem()
     {
         KitchenStuffSO currentItem = GetKitchenItem();
 

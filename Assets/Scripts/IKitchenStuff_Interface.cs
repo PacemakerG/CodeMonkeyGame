@@ -23,5 +23,5 @@ public interface IKitchenItemContainer : IKitchenItemHolder
 public interface IKitchenItemProcessor : IKitchenItemReceiver
 {
     // 找到合适的配方
-    Recipe GetMatchingRecipe();
+    Recipe GetMatchingRecipe_inputItem();
 }

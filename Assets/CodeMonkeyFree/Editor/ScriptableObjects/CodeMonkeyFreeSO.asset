@@ -14,25 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentVersion: 1.01
   subtype: kitchenchaos
-  lastShownTimestamp: 1745736819
+  lastShownTimestamp: 1745910973
   lastUpdateResponse:
     version: 1.01
     versionUrl: https://unitycodemonkey.com
-  checkedLastUpdateTimestamp: 1745736820
+  checkedLastUpdateTimestamp: 1745910973
   lastQOTDResponse:
-    questionId: 174
-    questionText: 'If I do:
-
-      <p>Instantiate(myPrefab, Input.mousePosition,
-      Quaternion.identity);</p>
-
-      <p>Will myPrefab be spawned under the mouse?</p>'
+    questionId: 175
+    questionText: When you create a new script, do you always have to extend MonoBehaviour?
     answerA: Yes
     answerB: No
-    answerC: 
+    answerC: Only if you want to use it as a Game Object Component
     answerD: 
     answerE: 
-  lastQotdTimestamp: 1745736820
+  lastQotdTimestamp: 1745910973
   lastDynamicHeaderResponse:
     topImageUrl: https://codemonkeyexternal.blob.core.windows.net/external/Misc/assetStoreSpringSale25.png
     topText: Spring Sale on the Asset Store, browse the Daily FLASH DEALS list to
@@ -41,11 +36,11 @@ MonoBehaviour:
     bottomText: Learn to get more WISHLISTS and SALES! (Spring Sale Discount Ends
       SOON!)
     bottomLink: howtomarketagame
-  lastDynamicHeaderTimestamp: 1745736820
+  lastDynamicHeaderTimestamp: 1745910973
   websiteLatestMessage:
     text: <a href="https://cmonkey.co/freecourses">Check out all my FREE courses!
       Click here!</a>
-  websiteLatestMessageTimestamp: 1745736820
+  websiteLatestMessageTimestamp: 1745910973
   websiteLatestVideos:
     videos:
     - youTubeId: YS6Jhj0nqgc
@@ -56,4 +51,4 @@ MonoBehaviour:
       title: AWESOME Assets 70% OFF! (Make something FUN with the Spring Sale!)
     - youTubeId: TZtbhCoff9Y
       title: I found a MAGICAL GitHub project! (FREE Desktop in Unity!)
-  websiteLatestVideosTimestamp: 1745736820
+  websiteLatestVideosTimestamp: 1745910973
