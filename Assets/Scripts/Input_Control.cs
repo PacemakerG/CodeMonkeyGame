@@ -40,7 +40,7 @@ public class Input_Control : MonoBehaviour
         playerInputActions.Player_1.Move.canceled += OnMove;
         playerInputActions.Player_1.Jump.performed += OnJump;
         playerInputActions.Player_1.Interact.performed += OnInteract;
-       
+      
     }
     
     private void OnDestroy()
