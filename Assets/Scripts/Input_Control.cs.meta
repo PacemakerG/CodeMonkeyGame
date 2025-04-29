@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0ebf68e43fd446840aeb2529d9c3d9c3
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - kitchenCounterControl: {instanceID: 0}
+  - tomatoSO: {fileID: 11400000, guid: 51d03344dc83e2b419ec67373cb89ca9, type: 2}
+  - cheeseSO: {fileID: 11400000, guid: 452e63a32ae0b6c4cbec8793a182f17f, type: 2}
+  - lettuceSO: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
